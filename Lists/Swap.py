@@ -9,3 +9,5 @@ while i < len(nums):
 print(nums)
 for j in range(len(nums)):
     print(nums[j], sep=" ", end=" ")
+
+
