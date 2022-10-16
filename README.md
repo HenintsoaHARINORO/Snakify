@@ -1,3 +1,3 @@
 # Snakify
-## Sankify Challenges
+## Snakify Challenges
 https://snakify.org/en/lessons/
