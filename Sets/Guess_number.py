@@ -15,8 +15,8 @@ while line != 'HELP':
     elif operation == 'NO':
         result = result.difference(guess)
     line = input()
-else:
-    print(*(sorted(list(result))))
+
+print(*(sorted(list(result))))
 """
 n = int(input())
 all_nums = set(range(1, n + 1))
