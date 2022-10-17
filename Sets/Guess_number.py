@@ -1,25 +1,36 @@
 n = int(input())
-real_set = set()
-i =1
+result = set()
+
+i = 1
 while i <= n:
-    real_set.add(i)
-    i +=1
-ans =set()
+    result.add(str(i))
+    i += 1
+line = input()
+while line != 'HELP':
 
-final = set()
-while 'HELP' not in ans:
-    print("not yet")
-    ans.add(input())
-    if 'YES' or 'NO' in ans:
-        ans.discard('YES')
-        ans.discard('NO')
-
+    guess = set(line.split(' '))
+    operation = input()
+    if operation == 'YES':
+        result = result.intersection(guess)  # maybe we need two sets
+    elif operation == 'NO':
+        result = result.difference(guess)
+    line = input()
 else:
-    ans.discard('HELP')
-    print('HELP')
+    print(*(sorted(list(result))))
+"""
+n = int(input())
+all_nums = set(range(1, n + 1))
+possible_nums = all_nums
+while True:
+    guess = input()
+    if guess == 'HELP':
+        break
+    guess = {int(x) for x in guess.split()}
+    answer = input()
+    if answer == 'YES':
+        possible_nums &= guess
+    else:
+        possible_nums &= all_nums - guess
 
-print(ans)
-print(real_set)
-
-
-
+print(' '.join([str(x) for x in sorted(possible_nums)]))
+"""
