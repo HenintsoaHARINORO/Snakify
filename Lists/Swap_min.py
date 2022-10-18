@@ -1,12 +1,8 @@
 input_num = input()
 nums = input_num.split()
-temp = 0
-i = 1
-j = 0
-while i < len(nums):
-    if nums[i - 1] > nums[i]:
-         nums[i], nums[i -1] = nums[i-1], nums[i]
-    i += 1
+max=nums.index(max(nums))
+min=nums.index(min(nums))
+
+nums[max],nums[min]=nums[min],nums[max]
+
 print(nums)
-for j in range(len(nums)):
-    print(nums[j], sep=" ", end=" ")
