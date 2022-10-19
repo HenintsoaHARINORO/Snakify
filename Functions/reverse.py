@@ -1,13 +1,26 @@
-n = int(input())
-stri=""
+s = " "
+n = " "
+while n != '0':
+    n = input()
+    s = s + ' ' + n
 
-def rev(n):
-    if n == 0:
-        return 0
+
+def reverse(s):
+    if len(s) == 0:
+        return s
     else:
-        return str(n)
+        return reverse(s[1:]) + s[0]
 
-while n != 0:
-    n = int(input())
-    print(rev(n))
-    n = int(input())
+for num in reverse(s):
+    print(num,end="")
+    print()
+
+"""
+def reverse():
+    x = int(input())
+    if x != 0:
+        reverse()
+    print(x)
+
+reverse()
+"""
