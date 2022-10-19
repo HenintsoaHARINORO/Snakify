@@ -1,17 +1,11 @@
-input_num = input()
-list = input_num.split()
+numbers = list(map(int, input().split()))
 
-nums = []
-for el in list:
-    nums.append(int(el))
-print(nums)
+max_index = numbers.index(max(numbers))
+min_index = numbers.index(min(numbers))
+numbers[max_index], numbers[min_index] = numbers[min_index], numbers[max_index]
 
-max_index = nums.index(max(nums))
-min_index = nums.index(min(nums))
-nums[max_index], nums[min_index] = nums[min_index], nums[max_index]
-
-for j in range(len(nums)):
-    print(nums[j], sep=" ", end=" ")
+for j in range(len(numbers)):
+    print(numbers[j], sep=" ", end=" ")
 
 """
 a = [int(s) for s in input().split()]
