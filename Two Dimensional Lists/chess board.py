@@ -1,17 +1,29 @@
-str = input()
-list = str.split()
-n = int(list[0])
-b = int(list[1])
-
-matrix = []
-for i in range(n):
-    a = []
-    for j in range(b):
-        a.append('.')
-        a.append('*')
-
-    matrix.append(a)
-for i in range(n):
-    for j in range(b):
-        print(matrix[i][j],end=" ")
+row_col = list(map(int, input().split()))
+column = row_col[0]
+row = row_col[1]
+for i in range(column):
+    for j in range(row):
+        if i % 2 == 0:
+            if j % 2 == 0:
+                print('.', end=' ')
+            else:
+                print('*', end=' ')
+        else:
+            if j % 2 == 0:
+                print('*', end=' ')
+            else:
+                print('.', end=' ')
     print()
+"""
+n, m = [int(i) for i in input().split()]
+a = []
+for i in range(n):
+    a.append([])
+    for j in range(m):
+        if (i + j) % 2 == 0:
+            a[i].append('.')
+        else:
+            a[i].append('*')
+for row in a:
+    print(' '.join(row))
+"""
